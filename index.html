@@ -54,76 +54,77 @@
   </footer>
 </body>
 </html>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beat Store</title>
+</head>
+<body>
+  <header>
+    <h1>Beat Store</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Beats</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="cart-button">Cart</button>
+  </header>
+  <main>
+    <h2>Featured Beats</h2>
+    <div class="beat-grid">
+      <div class="beat">
+        <img src="beat1.jpg" alt="Beat 1">
+        <h3>Beat 1</h3>
+        <button class="add-to-cart" data-name="Beat 1" data-price="9.99">Add to Cart</button>
+      </div>
+      <div class="beat">
+        <img src="beat2.jpg" alt="Beat 2">
+        <h3>Beat 2</h3>
+        <button class="add-to-cart" data-name="Beat 2" data-price="9.99">Add to Cart</button>
+      </div>
+      <div class="beat">
+        <img src="beat3.jpg" alt="Beat 3">
+        <h3>Beat 3</h3>
+        <button class="add-to-cart" data-name="Beat 3" data-price="9.99">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Copyright 2021 Beat Store</p>
+  </footer>
+  <div id="cart-overlay" class="hidden">
+    <div id="cart">
+      <h2>Cart</h2>
+      <button id="close-cart-button">Close</button>
+      <ul id="cart-items">
+        <!-- Cart items will be added here -->
+      </ul>
+      <p id="cart-total">Total: $0.00</p>
+      <button id="checkout-button">Checkout</button>
+    </div>
+  </div>
+  <script>
+    // Add click event listeners to the "Add to Cart" buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', event => {
+        const beatName = event.target.dataset.name;
+        const beatPrice = event.target.dataset.price;
+        addToCart(beatName, beatPrice);
+      });
+    });
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+    // Add click event listener to the cart button
+    const cartButton = document.getElementById('cart-button');
+    cartButton.addEventListener('click', event => {
+      toggleCart();
+    });
 
-header h1 {
-  margin: 0;
-}
+    // Add click event listener to the close cart button
+    const closeCartButton = document.getElement
 
-nav {
-  background-color: #eee;
-  display: flex;
-  justify-content: space-around;
-}
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 20px;
-}
-
-.beats-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.beat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  margin: 20px;
-  text-align: center;
-}
-
-.beat img {
-  width: 100%;
-  height: auto;
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
 
