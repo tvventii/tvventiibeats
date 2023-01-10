@@ -1,66 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>TVVENTII BEATS</title>
-	<style>
-		body {
-			background-color: black;
-			color: white;
-		}
-		.beat {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin: 20px 0;
-		}
-		.beat audio {
-			width: 300px;
-		}
-	</style>
+  <title>TVVENTII BEATS</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<h1>TVVENTII BEATS</h1>
-	</header>
-	<main>
-		<!-- Beat previews go here -->
-		<div class="beat">
-			<audio src="beat1.mp3" controls></audio>
-			<button onclick="addToCart(1)">Add to Cart</button>
-		</div>
-		<div class="beat">
-			<audio src="beat2.mp3" controls></audio>
-			<button onclick="addToCart(2)">Add to Cart</button>
-		</div>
-	</main>
-	<aside>
-		<h2>Shopping Cart</h2>
-		<!-- Cart items go here -->
-		<ul id="cart">
-		</ul>
-		<!-- Checkout button goes here -->
-		<button onclick="checkout()">Checkout</button>
-	</aside>
-	<footer>
-		<p>Copyright TVVENTII BEATS</p>
-	</footer>
-	<script>
-		// Add an item to the cart
-		function addToCart(item) {
-			const cart = document.getElementById('cart');
-			const li = document.createElement('li');
-			li.textContent = 'Beat ' + item;
-			cart.appendChild(li);
-		}
-		
-		// Checkout function
-		function checkout() {
-			// Redirect to PayPal for payment
-			window.location.href = 'https://www.paypal.com/';
-		}
-	</script>
+  <header>TVVENTII BEATS</header>
+  <div class="beat-container">
+    <div class="beat">
+      <h2>Beat Name</h2>
+      <audio controls>
+        <source src="beat.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <button class="add-to-cart">Add to Cart</button>
+      <p>Price: $25</p>
+    </div>
+    <!-- Repeat the above div for each beat -->
+  </div>
+  <div class="cart">
+    <h2>Cart</h2>
+    <table>
+      <tr>
+        <th>Beat Name</th>
+        <th>Price</th>
+      </tr>
+      <!-- Repeat the following tr element for each item in the cart -->
+      <tr>
+        <td>Beat Name</td>
+        <td>$25</td>
+      </tr>
+    </table>
+    <p>Total: $0</p>
+    <button class="checkout">Checkout</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
