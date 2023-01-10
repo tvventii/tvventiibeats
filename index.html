@@ -110,6 +110,32 @@
       return actions.payment.get().then(function(payment) {
         // Add the payment to the cart
         addPay
+        <!-- Add the PayPal JavaScript SDK to your HTML file -->
+<script src="https://www.paypal.com/sdk/js?client-id=AToycW3B1xxGT3L3ftRXS_ZAN68Awk8KGDpaxnV0qLNtzFnyin5g2vqUlxbZVZn11I9iLr1c4wJhB_cK"></script>
+
+<!-- Add an "Add to Cart" button for your beat -->
+<button id="add-to-cart-button">Add to Cart</button>
+
+<!-- Add a "View Cart" button -->
+<button id="view-cart-button">View Cart</button>
+
+<!-- Add a cart modal -->
+<div id="cart-modal" style="display:none;">
+  <h2>Cart</h2>
+  <table>
+    <tr>
+      <th>Beat Name</th>
+      <th>Price</th>
+    </tr>
+    <!-- Repeat the following tr element for each item in the cart -->
+    <tr>
+      <td>Beat Name</td>
+      <td>$25</td>
+    </tr>
+  </table>
+  <p>Total: $0</p>
+  <button id="checkout-button">Checkout</button>
+</
 
 
 
