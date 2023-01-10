@@ -37,6 +37,26 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!-- Add the PayPal JavaScript SDK to your HTML file -->
+<script src="https://www.paypal.com/sdk/js?client-id=AToycW3B1xxGT3L3ftRXS_ZAN68Awk8KGDpaxnV0qLNtzFnyin5g2vqUlxbZVZn11I9iLr1c4wJhB_cK"></script>
+
+<!-- Add a "Buy Now" button to your website -->
+<button
+  id="paypal-button"
+  data-amount="25"
+  data-currency="USD"
+  data-client-id="AToycW3B1xxGT3L3ftRXS_ZAN68Awk8KGDpaxnV0qLNtzFnyin5g2vqUlxbZVZn11I9iLr1c4wJhB_cK"
+  data-recipient="tvventii@gmail.com"
+  data-button-type="submit"
+  data-button-shape="rect"
+>
+  Buy Now
+</button>
+
+<!-- Initialize the PayPal JavaScript SDK -->
+<script>
+  paypal.Buttons().render('#paypal-button');
+</script>
 
 
 
