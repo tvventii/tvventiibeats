@@ -93,11 +93,93 @@
   margin: 10px;
   text-align: center;
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 70px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: #ccc;
+}
+
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+main h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.beat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.beat {
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.beat img {
+  width: 100%;
+}
+
+.beat h3 {
+  font-size: 18px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+}
 
 .beat button {
-  background-color: #333;
+  background-color: #fff;
   border: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   font-size: 16px;
   padding: 10px;
@@ -105,11 +187,11 @@
 }
 
 .beat button:hover {
-  background-color: #444;
+  background-color: #ccc;
 }
 
 footer {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -134,74 +216,8 @@ footer p {
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-}
 
-#cart h2 {
-  background-color: #333;
-  color: #fff;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-}
 
-#cart button {
-  background-color: #333;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
-}
-
-#cart button:hover {
-  background-color: #444;
-}
-
-#cart-items {
-  margin: 0;
-  padding: 0;
-}
-
-#cart-items li {
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-#cart-items li:last-child {
-  border-bottom: none;
-}
-
-#cart-items li .beat-name {
-  font-size: 18px;
-}
-
-#cart-items li .beat-price {
-  color: #333;
-}
-
-#cart-total {
-  background-color: #f4f4f4;
-  border-top: 1px solid #eee;
-  font-size: 18px;
-  padding: 20px;
-  text-align: right;
-}
-
-#cart-total strong {
-  color: #333;
-}
-
-.hidden {
-  display: none;
-}
 
 
 
