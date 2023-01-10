@@ -59,6 +59,59 @@
   paypal.Buttons().render('#paypal-button');
 </script>
 
+<!-- Add an "Add to Cart" button for your beat -->
+<button id="add-to-cart-button">Add to Cart</button>
+
+<!-- Initialize the PayPal JavaScript SDK -->
+<script>
+  // Create a custom "Add to Cart" button
+  paypal.Buttons().create({
+    // Set your client ID
+    clientId: 'YOUR_CLIENT_ID',
+    // Set the environment
+    env: 'sandbox', // or 'production'
+    // Set the button style
+    style: {
+      color: 'blue',
+      shape: 'rect',
+      label: 'checkout',
+      height: 40
+    },
+    // Set the payment object
+    payment: function(data, actions) {
+      // Set the payment object
+      return actions.payment.create({
+        // Set the payment details
+        transactions: [{
+          // Set the amount
+          amount: {
+            total: '25',
+            currency: 'USD'
+          },
+          // Set the item
+          item_list: {
+            items: [{
+              name: 'Dont Cha',
+              price: '25',
+              currency: 'USD',
+              quantity: 1
+            }]
+          }
+        }],
+        // Set the recipient
+        payee: {
+          email: 'tvventii@gmail.com'
+        }
+      });
+    },
+    // Set the "onAuthorize" function
+    onAuthorize: function(data, actions) {
+      // Get the payment object
+      return actions.payment.get().then(function(payment) {
+        // Add the payment to the cart
+        addPay
+
+
 
 
 
