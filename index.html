@@ -21,6 +21,132 @@
 <html>
 <head>
   <title>Beat Store</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 70px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: #ccc;
+}
+
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+main h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.beat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.beat {
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.beat img {
+  width: 100%;
+}
+
+.beat h3 {
+  font-size: 18px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.beat button {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.beat button:hover {
+  background-color: #ccc;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+#cart-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#cart {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  </style>
 </head>
 <body>
   <header>
@@ -99,122 +225,7 @@
   color: #fff;
 }
 
-<header> {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  height: 70px;
-}
 
-<header> h1 {
-  margin: 0;
-  font-size: 24px;
-  color: #fff;
-}
-
-<header nav {
-  display: inline-block;
-}
-
-<header nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-<header nav ul li {
-  list-style: none;
-  margin-right: 20px;
-}
-
-<header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-}
-
-<header nav ul li a:hover {
-  color: #ccc;
-}
-
-<main {
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-<main h2 {
-  margin-top: 0;
-  color: #fff;
-}
-
-.beat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-
-.beat {
-  background-color: #000;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-<beat img {
-  width: 100%;
-}
-
-<beat h3 {
-  font-size: 18px;
-  margin: 10px;
-  text-align: center;
-  color: #fff;
-}
-
-<beat button {
-  background-color: #fff;
-  border: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
-}
-
-<beat button:hover {
-  background-color: #ccc;
-}
-
-<footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-}
-
-<cart-overlay> {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
-
-<cart> {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 
 
 
